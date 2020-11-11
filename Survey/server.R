@@ -1,4 +1,11 @@
 library(shiny)
+library(tidyverse)
+
+#Template
+ui<-fluidPage("Hello World")
+server<-function(input,outpu){}
+shinyApp(ui=ui, server=server)
+
 
 # Read the survey questions
 Qlist <- read.csv("Qlist.csv")
@@ -37,7 +44,7 @@ shinyServer(function(input, output) {
       return(
         list(
           h5("Welcome to Shiny Survey Tool!"),
-          h6("by Francis Smart")
+          h6("by Javier Iglesias-Gonzalez")
         )
       )
     
@@ -127,3 +134,4 @@ shinyServer(function(input, output) {
   })
   
 })
+
